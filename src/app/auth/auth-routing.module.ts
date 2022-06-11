@@ -18,6 +18,7 @@ import { EditAccountantComponent } from './components/edit-accountant/edit-accou
 import { DeleteAccountantComponent } from './components/delete-accountant/delete-accountant.component';
 import { StudentLoginComponent } from './components/student-login/student-login.component';
 import { TeacherLoginComponent } from './components/teacher-login/teacher-login.component';
+import { StudentDashboardComponent } from './components/student-dashboard/student-dashboard.component';
 
 
 const routes: Routes = [
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'edit-accountant', component: EditAccountantComponent },
   { path: 'delete-accountant', component: DeleteAccountantComponent },
   { path: 'student-login', component: StudentLoginComponent },
+  { path: 'student-dashboard/:data', component: StudentDashboardComponent },
   { path: 'teacher-login', component: TeacherLoginComponent },
   {
     path: '', pathMatch: 'full', redirectTo: 'login'

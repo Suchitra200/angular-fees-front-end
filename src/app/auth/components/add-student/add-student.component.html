@@ -5,37 +5,37 @@
        type="button"
         data-bs-toggle="collapse"
          data-bs-target="#navbarNavDropdown"
-          aria-controls="navbarNavDropdown" 
-          aria-expanded="false" 
+          aria-controls="navbarNavDropdown"
+          aria-expanded="false"
           aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" 
+      <div class="collapse navbar-collapse"
       id="navbarNavDropdown">
         <ul class="navbar-nav">
-          
-          
+
+
           <li class="nav-item">
-            <a class="nav-link" 
+            <a class="nav-link"
             [routerLink]="['/add-student']" routerLinkActive="active">Add Student </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" 
+            <a class="nav-link"
             [routerLink]="['/view-student']" routerLinkActive="active">View Student</a>
           </li>
-          
+
           <li class="nav-item">
-            <a class="nav-link" 
+            <a class="nav-link"
             [routerLink]="['/search-student']" routerLinkActive="active">Search Student</a>
           </li>
-         
+
           <li class="nav-item">
-            <a class="nav-link" 
+            <a class="nav-link"
             [routerLink]="['/due-fees']" routerLinkActive="active">View Dues</a>
           </li>
-          
-          
-          
+
+
+
          </ul>
       </div>
     </div>
@@ -64,22 +64,22 @@
 	  <label for="email">e-mail :</label>
 	  <input #name="ngModel" required name="emailId" id="email" type="email" class="form-control" ngModel>
 	  <div *ngIf="name.touched && name.invalid" class="alert alert-danger" > e-mail id is required </div>
-	  
+
 	</div><br>
 	<div class="form-group">
 		<div class="form-check">
 			<label  for="gender">Gender:</label><br>
 
-		
+
 			<input class="form-check-input" type="radio" name="gender" id="gender" value="Male" required ngModel/>
 			<label class="form-check-label" for="gender">Male</label><br>
-            
+
 			<input class="form-check-input" type="radio" name="gender" id="gender" value="Female" required ngModel/>
 			<label class="form-check-label" for="gender">Female</label>
 
 
 		</div>
-		
+
 	  </div><br>
 	<div class="form-group">
 		<label for="course">Course     :</label>
@@ -91,8 +91,8 @@
 			<option id="react" value="react">React</option>
 		</select>
 		<div *ngIf="name.touched && name.invalid" class="alert alert-danger" > course is required </div>
-		
-	  </div><br>	
+
+	  </div><br>
 	<div class="form-group">
 		<label for="sex">Fee        :</label>
 		<input #name="ngModel" required name="fee" id="fee" type="number" class="form-control" ngModel>
@@ -117,8 +117,13 @@
 		<label for="contact">Contact     :</label>
 		<input #name="ngModel" required name="contactno" id="contact" type="number"  class="form-control" ngModel>
 		<div *ngIf="name.touched && name.invalid" class="alert alert-danger" > Contact is required </div>
-		
+
 	</div><br>
+  <div class="form-group">
+		<label for="due">Password       :</label>
+		<input #name="ngModel" required name="password" id="password"  class="form-control" ngModel>
+		<div *ngIf="name.touched && name.invalid" class="alert alert-danger" > Password is required </div>
+	  </div> <br>
 	<!--<button class="btn btn-primary" type="submit">Add Student</button>*/ -->
 	<input class="submit" type="submit" value="Submit" (click)="add(student)">
 </form>

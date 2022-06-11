@@ -5,7 +5,8 @@ export interface Student{
 	studentCourse:string;
 	studentFee:string;
 	studentPaid:string;
-    studentDueFees:number;
+  studentDueFees:number;
 	studentContactNo:number;
-    
+  password:string
+
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { AdminService } from 'src/app/services/admin.service';
+import { studentService } from 'src/app/services/student.service';
+import { Student } from 'src/app/student';
 
 @Component({
   selector: 'app-student-login',
@@ -11,18 +12,19 @@ import { AdminService } from 'src/app/services/admin.service';
 export class StudentLoginComponent implements OnInit {
 
   errorMsg : boolean =false;
+  student : any=[];
 
-  constructor(private router: Router, private adminService: AdminService) { }
+  constructor(private router: Router, private studentService: studentService) { }
 
   ngOnInit(): void {
   }
 
   onSubmit(f: NgForm) {
-    this.adminService.getAdminPassword(f.value.username, f.value.password).subscribe(response => {
-      console.log(response)
-      if(response != null){
+    this.studentService.getStudent(f.value.username, f.value.password).subscribe(response => {
+     this.student = response;
+      if(response){
         this.errorMsg=false
-        this.router.navigateByUrl("/student-login")
+        this.router.navigate(['/student-dashboard/'+ JSON.stringify({response})])
 
       }
       else{

@@ -28,6 +28,8 @@ import { EditAccountantComponent } from './components/edit-accountant/edit-accou
 import { DeleteAccountantComponent } from './components/delete-accountant/delete-accountant.component';
 import { StudentLoginComponent } from './components/student-login/student-login.component';
 import { TeacherLoginComponent } from './components/teacher-login/teacher-login.component';
+import { PaypalComponent } from './components/paypal/paypal.component';
+import { StudentDashboardComponent } from './components/student-dashboard/student-dashboard.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +52,8 @@ import { TeacherLoginComponent } from './components/teacher-login/teacher-login.
     DeleteAccountantComponent,
     StudentLoginComponent,
     TeacherLoginComponent,
+    PaypalComponent,
+    StudentDashboardComponent,
     
   ],
   imports: [
