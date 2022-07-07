@@ -30,6 +30,7 @@ import { StudentLoginComponent } from './components/student-login/student-login.
 import { TeacherLoginComponent } from './components/teacher-login/teacher-login.component';
 import { PaypalComponent } from './components/paypal/paypal.component';
 import { StudentDashboardComponent } from './components/student-dashboard/student-dashboard.component';
+import { TeacherComponent } from './components/teacher/teacher.component';
 
 @NgModule({
   declarations: [
@@ -54,7 +55,8 @@ import { StudentDashboardComponent } from './components/student-dashboard/studen
     TeacherLoginComponent,
     PaypalComponent,
     StudentDashboardComponent,
-    
+    TeacherComponent,
+
   ],
   imports: [
     CommonModule,
@@ -65,12 +67,12 @@ import { StudentDashboardComponent } from './components/student-dashboard/studen
     MatInputModule,
     DataTablesModule,
     HttpClientModule,
-    
+
   ],
   exports:[
     AdminComponent,
     AccountantComponent,
-    
+
   ]
 })
 export class AuthModule { }
