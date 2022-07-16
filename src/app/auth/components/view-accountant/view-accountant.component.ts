@@ -30,11 +30,11 @@ title = 'datatables';
     onEdit(accountant:any){
       this.router.navigate(['/edit-accountant',accountant])
     }
-    
+
     onDelete(accountantId: number){
       console.log(accountantId)
       if(confirm("Do you really want to delete this? ")) {
-    
+
         this.adminService.deleteaccountant(accountantId)
           .subscribe(response => {
             alert("Deleted Successfully")

@@ -19,7 +19,12 @@ export class AdminService {
 
   addAccountant(accountant:any){
     return this.http.post(this.apiUrl + '/admin/addaccountant',accountant);
-   
+
+  }
+
+  addTeacher(teacher:any){
+    return this.http.post(this.apiUrl + '/admin/addTeacher',teacher);
+
   }
 
   updateaccountant(accountant: any){

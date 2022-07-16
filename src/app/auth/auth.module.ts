@@ -31,6 +31,7 @@ import { TeacherLoginComponent } from './components/teacher-login/teacher-login.
 import { PaypalComponent } from './components/paypal/paypal.component';
 import { StudentDashboardComponent } from './components/student-dashboard/student-dashboard.component';
 import { TeacherComponent } from './components/teacher/teacher.component';
+import { AddTeacherComponent } from './components/add-teacher/add-teacher.component';
 
 @NgModule({
   declarations: [
@@ -56,7 +57,7 @@ import { TeacherComponent } from './components/teacher/teacher.component';
     PaypalComponent,
     StudentDashboardComponent,
     TeacherComponent,
-
+    AddTeacherComponent
   ],
   imports: [
     CommonModule,

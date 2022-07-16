@@ -5,37 +5,38 @@
      type="button"
       data-bs-toggle="collapse"
        data-bs-target="#navbarNavDropdown"
-        aria-controls="navbarNavDropdown" 
-        aria-expanded="false" 
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
         aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" 
+    <div class="collapse navbar-collapse"
     id="navbarNavDropdown">
       <ul class="navbar-nav">
-        
-        
+
+
         <li class="nav-item">
-          <a class="nav-link" 
+          <a class="nav-link"
           [routerLink]="['/add-student']" routerLinkActive="active">Add Student </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" 
+          <a class="nav-link"
           [routerLink]="['/view-student']" routerLinkActive="active">View Student</a>
         </li>
-        
+
         <li class="nav-item">
-          <a class="nav-link" 
+          <a class="nav-link"
           [routerLink]="['/search-student']" routerLinkActive="active">Search Student</a>
         </li>
-       
+
         <li class="nav-item">
-          <a class="nav-link" 
+          <a class="nav-link"
           [routerLink]="['/due-fees']" routerLinkActive="active">View Dues</a>
         </li>
-        
-        
-        
+
+
+
+
        </ul>
     </div>
   </div>
@@ -49,8 +50,8 @@
 
 <h1>View Students</h1>
 <form #deleteForm="ngForm">
-<table datatable [dtOptions]="dtOptions" class="row-border hover" style="background-color: rgb(164, 172, 180)">
- 
+<table *ngIf="students.length" datatable [dtOptions]="dtOptions" class="row-border hover" style="background-color: rgb(164, 172, 180)">
+
   <thead>
     <tr>
       <th>Rollno</th>
@@ -80,10 +81,12 @@
       <td>{{ student?.address}}</td>
       <td>{{ student?.contactno }}</td>
 
-      
 
-      <td><a class="btn"  (click)="onEdit(student)">EDIT</a><br></td> 
-      <td><button id="remove" (click)="onDelete(student.studentId)">DELETE</button></td> 
+
+      <td><a class="btn"  (click)="onEdit(student)">EDIT</a><br></td>
+      <td><button id="remove" (click)="onDelete(student.studentId)">DELETE</button></td>
+
+
        <!--  <button id="remove" (click)="deleteRow(student.studentId)">DELETE</button>-->
       </tr>
   </tbody>

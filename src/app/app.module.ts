@@ -11,9 +11,12 @@ import { DataTablesModule } from 'angular-datatables';
 import { HttpClientModule } from '@angular/common/http';
 import {MatRadioModule} from '@angular/material/radio';
 
+
 @NgModule({
   declarations: [
     AppComponent,
+
+
     //A11yModule
     //AddAccountantComponent,
     //AddStudentComponent,
@@ -33,7 +36,7 @@ import {MatRadioModule} from '@angular/material/radio';
     //AuthroutingComponents,
    // HeaderComponent,
     //ColumnOneComponent
-    
+
 
   ],
   imports: [
@@ -46,7 +49,7 @@ import {MatRadioModule} from '@angular/material/radio';
     //FormsModule,
     HttpClientModule,
     MatRadioModule
-    
+
   ],
   providers: [],
   bootstrap: [AppComponent]

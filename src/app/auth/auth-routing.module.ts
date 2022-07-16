@@ -20,12 +20,17 @@ import { StudentLoginComponent } from './components/student-login/student-login.
 import { TeacherLoginComponent } from './components/teacher-login/teacher-login.component';
 import { StudentDashboardComponent } from './components/student-dashboard/student-dashboard.component';
 import { TeacherComponent } from './components/teacher/teacher.component';
+import{ AddTeacherComponent} from './components/add-teacher/add-teacher.component';
 
 
 const routes: Routes = [
   { path: 'admin', component: AdminComponent },
   { path: 'accountant', component: AccountantComponent },
   { path: 'admin-home', component: AdminHomeComponent },
+  { path: 'add-teacher', component: AddTeacherComponent },
+  // { path: 'view-teacher', component: ViewTeacherComponent },
+
+
   { path: 'accountant-home', component: AccountantHomeComponent },
   { path: 'add-student', component: AddStudentComponent },
   { path: 'add-accountant', component: AddAccountantComponent },

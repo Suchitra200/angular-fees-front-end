@@ -20,9 +20,11 @@
     background-image: url('https://images.unsplash.com/photo-1588345921523-c2dcdb7f1dcd?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
     height: 100vh;
     background-size: cover;
-  "
->
-  <h1>View Students</h1>
+  ">
+
+
+<button style = "border-radius: 30px;" [routerLink]="['/login']" routerLinkActive="active">Logout</button>
+<br><br>
   <form #deleteForm="ngForm">
     <table *ngIf="students.length"
       datatable

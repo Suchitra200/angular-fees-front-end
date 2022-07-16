@@ -16,4 +16,6 @@ export class TeacherService {
   getTeacherPassword(emailId: string, password: string) {
     return this.http.get(this.apiUrl + '/teacherLogin' + '/' + emailId + '/' + password);
   }
+
+
 }
