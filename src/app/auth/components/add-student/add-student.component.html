@@ -89,11 +89,10 @@
 	<div class="form-group">
 		<label for="course">Course     :</label>
 		<select #name="ngModel" required name="course" id="course" class="form-control" ngModel required>
-			<option id="java" value="java">Java</option>
-			<option id="python" value="python">Python</option>
-			<option id="angular" value="angular">Angular</option>
-			<option id="dotnet" value="dotnet">Dotnet</option>
-			<option id="react" value="react">React</option>
+			<option id="java" value="ISE">ISE</option>
+			<option id="python" value="CS">CS</option>
+			<option id="angular" value="Mechanical">Mechanical Engineering</option>
+			<option id="dotnet" value="Electrical">Electrical Engineering</option>
 		</select>
 		<div *ngIf="name.touched && name.invalid" class="alert alert-danger" > course is required </div>
 

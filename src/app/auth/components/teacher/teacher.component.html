@@ -43,6 +43,7 @@
           <th>due</th>
           <th>Address</th>
           <th>Contact</th>
+          <th>Send Email</th>
         </tr>
       </thead>
       <tbody>
@@ -58,6 +59,7 @@
           <td>{{ student?.duefees }}</td>
           <td>{{ student?.address }}</td>
           <td>{{ student?.contactno }}</td>
+          <button class = "button button-edit" style = "margin-top: 5px; border-radius: 30px; margin-left:9px;" (click)="sendEmail(student)">CLICK HERE</button>
         </tr>
       </tbody>
     </table>

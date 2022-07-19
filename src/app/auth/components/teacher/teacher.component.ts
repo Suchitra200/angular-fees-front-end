@@ -2,6 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { AccountantService } from 'src/app/services/accountant.service';
+import { EmailserviceService } from 'src/app/services/emailservice.service';
+import { Student } from 'src/app/student';
 
 @Component({
   selector: 'app-teacher',
@@ -13,7 +15,7 @@ export class TeacherComponent implements OnInit {
   title = 'datatables';
   dtOptions: DataTables.Settings = {};
   students: any = [];
-  constructor(private http: HttpClient, private accountantService: AccountantService, private router: Router) { }
+  constructor(private http: HttpClient, private accountantService: AccountantService, private router: Router, private emailservice: EmailserviceService) { }
 
   ngOnInit(): void {
     this.dtOptions = {
@@ -47,6 +49,16 @@ export class TeacherComponent implements OnInit {
           console.log(error)
         })
     }
+  }
+
+  sendEmail(student: any) {
+
+    this.emailservice.sendEmail(student).subscribe(response => {
+      alert("Email Sent Successfully");
+    }, error => {
+      alert("There is some technical issue please try again later.");
+    });
+
   }
 
 }
