@@ -21,6 +21,7 @@ import { TeacherLoginComponent } from './components/teacher-login/teacher-login.
 import { StudentDashboardComponent } from './components/student-dashboard/student-dashboard.component';
 import { TeacherComponent } from './components/teacher/teacher.component';
 import{ AddTeacherComponent} from './components/add-teacher/add-teacher.component';
+import { CreateOrderComponent } from './components/create-order/create-order.component';
 
 
 const routes: Routes = [
@@ -28,7 +29,6 @@ const routes: Routes = [
   { path: 'accountant', component: AccountantComponent },
   { path: 'admin-home', component: AdminHomeComponent },
   { path: 'add-teacher', component: AddTeacherComponent },
-  // { path: 'view-teacher', component: ViewTeacherComponent },
 
 
   { path: 'accountant-home', component: AccountantHomeComponent },
@@ -48,6 +48,7 @@ const routes: Routes = [
   { path: 'student-dashboard/:data', component: StudentDashboardComponent },
   { path: 'teacher-dashboard', component: TeacherComponent },
   { path: 'teacher-login', component: TeacherLoginComponent },
+  { path: 'order', component: CreateOrderComponent },
   {
     path: '', pathMatch: 'full', redirectTo: 'login'
   }

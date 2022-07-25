@@ -31,6 +31,7 @@ this.http.get('http://localhost:8081/accountantlogin/studentDetails')
 }
 
 onEdit(student:any){
+  debugger
   this.router.navigate(['/edit-student',student])
 }
 

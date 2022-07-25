@@ -99,33 +99,33 @@
 	  </div><br>
 	<div class="form-group">
 		<label for="sex">Fee        :</label>
-		<input #name="ngModel" required name="fee" id="fee" type="number" class="form-control" ngModel>
+		<input #name="ngModel" required name="fee" [(ngModel)]="fee" (blur)="checkDueFee()" id="fee" type="number" class="form-control" ngModel>
 		<div *ngIf="name.touched && name.invalid" class="alert alert-danger" > Total fee is required </div>
 	  </div> <br>
 	  <div class="form-group">
 		<label for="paid">Paid       :</label>
-		<input #name="ngModel" required name="paid" id="paid" type="number" class="form-control" ngModel>
+		<input #name="ngModel" required name="paid" [(ngModel)]="paid" (blur)="checkDueFee()" id="paid" type="number" class="form-control" ngModel>
 		<div *ngIf="name.touched && name.invalid" class="alert alert-danger" > Paid amount is required </div>
 	  </div>  <br>
 	<div class="form-group">
 		<label for="due">Due        :</label>
-		<input #name="ngModel" required name="duefees" id="due" type="number" class="form-control" ngModel>
+		<input #name="ngModel" required name="duefees" [(ngModel)]="dueFee" [disabled]="true" id="due" type="number" class="form-control" ngModel>
 		<div *ngIf="name.touched && name.invalid" class="alert alert-danger" > Due amount is required </div>
 	  </div> <br>
 	<div class="form-group">
 	  <label for="address">Address    :</label>
-	  <textarea #name="ngModel" required name="address" id="address" cols="30" rows="10" class="form-control" ngModel></textarea>
+	  <textarea #name="ngModel" required name="address" id="address" cols="10" rows="10" class="form-control" ngModel></textarea>
 	  <div *ngIf="name.touched && name.invalid" class="alert alert-danger" > Address is required </div>
 	</div><br>
 	<div class="form-group">
 		<label for="contact">Contact     :</label>
-		<input #name="ngModel" required name="contactno" id="contact" type="number"  class="form-control" ngModel>
+		<input #name="ngModel" required onKeyPress="if(this.value.length==10) return false;" name="contactno" id="contact" type="number"  class="form-control" ngModel>
 		<div *ngIf="name.touched && name.invalid" class="alert alert-danger" > Contact is required </div>
 
 	</div><br>
   <div class="form-group">
 		<label for="due">Password       :</label>
-		<input #name="ngModel" required name="password" id="password"  class="form-control" ngModel>
+		<input #name="ngModel" required name="password" id="password" type="password" class="form-control" ngModel>
 		<div *ngIf="name.touched && name.invalid" class="alert alert-danger" > Password is required </div>
 	  </div> <br>
 	<!--<button class="btn btn-primary" type="submit">Add Student</button>*/ -->

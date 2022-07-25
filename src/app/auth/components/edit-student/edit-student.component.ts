@@ -10,31 +10,33 @@ import { AccountantService } from 'src/app/services/accountant.service';
 })
 export class EditStudentComponent implements OnInit {
   student : any={
-    studentId:null, 
-    contactno:null, 
-    course:null, 
-    duefees:null, 
+    studentId:null,
+    contactno:null,
+    course:null,
+    duefees:null,
     emailId:null,
     fee:null,
-    gender:null, 
-    paid:null, 
-    student_name:null, 
+    gender:null,
+    paid:null,
+    student_name:null,
     address:null
   }
   constructor(private service: AccountantService, private router: ActivatedRoute, private routeTo: Router) { }
 
   ngOnInit(): void {
-   
+
     this.router.paramMap.subscribe(params => {
       this.student.studentId = params.get('studentId')
       this.student.studentName = params.get('studentName')
       this.student.emailId = params.get('emailId')
+
       this.student.address = params.get('address')
       this.student.contactno = params.get('contactno')
       this.student.fee = params.get('fee')
       this.student.paid = params.get('paid')
       this.student.duefees = params.get('duefees')
-      
+      this.student.password = params.get('password');
+
       console.log(params)
       console.log(params.get('student'))
      // this.student = JSON.parse(this.classified)

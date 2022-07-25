@@ -10,7 +10,7 @@ import { AdminService } from 'src/app/services/admin.service';
 })
 export class AddAccountantComponent implements OnInit {
   errorMsg: boolean=false
- 
+
   accountantObj={accountantId: null,
     address: null,
     contact: null,
@@ -21,15 +21,17 @@ export class AddAccountantComponent implements OnInit {
   //adminService: any;
   constructor(private router: Router, private adminService: AdminService) { }
 
- 
+
 //  onSubmit(f: NgForm) {
  //   console.log(f.value);  // { first: '', last: '' }
  //   console.log(f.valid);  // false
  // }
 add(accountant:NgForm){
+  // debugger
+  if(accountant.form.status == 'VALID') {
   //  console.log(this.accountantObj)
     this.accountantObj=accountant.value
-  
+
    console.log(this.accountantObj)
     this.adminService.addAccountant(this.accountantObj).subscribe((response) => {
       //console.log(response)
@@ -38,6 +40,9 @@ add(accountant:NgForm){
     }, error => {
       alert("error occured")
     })
+  }else{
+    alert('Please complete the form or enter correct email ID.')
+  }
   }
  ngOnInit(): void {
   }
@@ -48,7 +53,7 @@ add(accountant:NgForm){
       if(response != null){
         this.errorMsg=false
        // this.router.navigateByUrl("/admin-home")
-       
+
       }
       else{
         this.errorMsg=true
@@ -58,7 +63,7 @@ add(accountant:NgForm){
     })
   }
 
-*/  
-  
+*/
+
 
 }
