@@ -35,7 +35,6 @@ export class AddStudentComponent implements OnInit {
   //   console.log(f.valid);  // false
   // }
   add(student: NgForm) {
-    // debugger
     if (student.form.status == 'VALID') {
       //  console.log(this.accountantObj)
       this.studentObj = student.value
@@ -44,7 +43,7 @@ export class AddStudentComponent implements OnInit {
       this.accountantService.addStudent(this.studentObj).subscribe((response) => {
         //console.log(response)
         alert("Posted successfully!!!")
-        this.router.navigateByUrl("/add-student")
+        this.router.navigateByUrl("/due-fees")
       }, error => {
         alert("error occured")
       })
@@ -67,6 +66,8 @@ export class AddStudentComponent implements OnInit {
       this.dueFee = null;
       this.paid = null;
       alert("Paid amount shoudn't be more than fee amount!");
+    }else{
+
     }
   }
   //onSubmit(f: NgForm) {

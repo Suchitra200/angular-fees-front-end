@@ -109,7 +109,7 @@
 	  </div>  <br>
 	<div class="form-group">
 		<label for="due">Due        :</label>
-		<input #name="ngModel" required name="duefees" [(ngModel)]="dueFee" [disabled]="true" id="due" type="number" class="form-control" ngModel>
+		<input #name="ngModel" required name="duefees" [(ngModel)]="dueFee" readonly="readonly"  id="due" type="number" class="form-control" ngModel>
 		<div *ngIf="name.touched && name.invalid" class="alert alert-danger" > Due amount is required </div>
 	  </div> <br>
 	<div class="form-group">
